@@ -1,0 +1,71 @@
+<nav>
+  <div class="logo">
+    <i class="bx bx-menu menu-icon"></i>
+    <span class="logo-name">Sistema Documental</span>
+  </div>
+
+  <div class="sidebar">
+    <div class="logo">
+      <i class="bx bx-menu menu-icon"></i><span class="logo-name">{{identity.name}}</span>
+    </div>
+
+    <div class="sidebar-content">
+      <ul class="lists">
+        <li class="list">
+          <a href="/dashboard" class="nav-link">
+            <i class="bx bx-home-alt icon"></i>
+            <span class="link">Dashboard</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="/usuarios" class="nav-link">
+            <i class="bx bx-user icon"></i>
+            <span class="link">Usuarios</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="/documentos" class="nav-link">
+            <i class="bx bx-bell icon"></i>
+            <span class="link">Documentos</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="/departamento-usuario" class="nav-link">
+            <i class="bx bx-message-rounded icon"></i>
+            <span class="link">Departamentos</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="/flujo-proceso" class="nav-link">
+            <i class="bx bx-message-rounded icon"></i>
+            <span class="link">Flujo de procesos</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="/proceso-determinado" class="nav-link">
+            <i class="bx bx-message-rounded icon"></i>
+            <span class="link">Procesos determinados</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="/solicitud-baja" class="nav-link">
+            <i class="bx bx-message-rounded icon"></i>
+            <span class="link">Solicitud baja</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <div class="bottom-cotent">
+        <li class="list">
+          <a href="" (click)="logout()" class="nav-link">
+            <i class="bx bx-log-out icon"></i>
+            <span class="link">Logout</span>
+          </a>
+        </li>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="overlay"></section>

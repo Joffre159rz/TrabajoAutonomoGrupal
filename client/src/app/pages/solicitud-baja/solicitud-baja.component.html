@@ -1,0 +1,25 @@
+<div class="container-fluid g-0">
+  <main class="content">
+    <div class="container-fluid">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Proceso</th>
+            <!-- Agrega más encabezados de acuerdo a tus datos -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let solicitud of solicitudesBajas">
+            <td>{{ solicitud._id }}</td>
+            <td>{{ solicitud.name }}</td>
+            <td>{{ solicitud.proceso_id.name }}</td>
+            <!-- Muestra más datos aquí según la estructura de tus objetos -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <app-sidebar></app-sidebar>
+</div>

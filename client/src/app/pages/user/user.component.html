@@ -1,0 +1,29 @@
+<div class="container-fluid g-0">
+  <main class="content">
+    <div class="container-fluid">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombres</th>
+            <th>Email</th>
+            <th>Ciudad</th>
+            <th>Rol</th>
+            <!-- Agrega más encabezados de acuerdo a tus datos -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user?._id }}</td>
+            <td>{{ user?.name }}</td>
+            <td>{{ user?.email }}</td>
+            <td>{{ user?.ciudadId?.name }}</td>
+            <td>{{ user?.roleId?.name }}</td>
+            <!-- Muestra más datos aquí según la estructura de tus objetos -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <app-sidebar></app-sidebar>
+</div>

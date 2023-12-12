@@ -1,0 +1,34 @@
+<div class="container-fluid g-0">
+    <main class="content">
+      <div class="container-fluid">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Principal </th>
+              <th>Recibido</th>
+              <th>Nombre del cliente</th>
+              <th>C.I. del cliente</th>
+              <th>Proceso determinado</th>
+              <!-- Agrega más encabezados de acuerdo a tus datos -->
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let documento of documentos">
+              <td>{{ documento._id }}</td>
+              <td>{{ documento.principal }}</td>
+              <td>{{ documento.recibido ? 'Si' : 'No' }}</td>
+              <td>{{ documento.persona_id.name }}</td>
+              <td>{{ documento.persona_id.CI }}</td>
+              <td>{{ documento.proceso_determinado_id.name }}</td>              
+              <!-- Muestra más datos aquí según la estructura de tus objetos -->
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+    </main>
+    <app-sidebar></app-sidebar>
+  </div>
+  
