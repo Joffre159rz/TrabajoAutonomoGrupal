@@ -36,8 +36,9 @@ jobs:
       env:
          NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-         docker build -t jofre159rz/trabajoautonomo:$NEW_VERSION .
-         docker build -t jofre159rz/trabajoautonomo:latest .
+         docker-compose build
+         docker tag docker_compose:latest jofre159rz/trabajoautonomo:$NEW_VERSION
+         docker tag docker_compose:latest jofre159rz/trabajoautonomo:latest
     - name: Push Docker Image
       env:
          NEW_VERSION: ${{ steps.version.outputs.version }}
