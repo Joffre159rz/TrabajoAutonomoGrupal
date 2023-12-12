@@ -1,0 +1,11 @@
+FROM node:14
+
+WORKDIR /app
+
+COPY microservice-solicitud-baja/microservice-solicitud-baja/package.json .
+
+RUN npm install
+
+COPY microservice-solicitud-baja/microservice-solicitud-baja/dist ./src
+
+CMD ["node", "src/main.js"]
