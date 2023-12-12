@@ -36,8 +36,8 @@ jobs:
       env:
          NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-         docker build -t jofre159rz/trabajoautonomo:$NEW_VERSION -f Dockerfile-microservice .
-         docker build -t jofre159rz/trabajoautonomo:latest -f Dockerfile-microservice .
+         docker build -t jofre159rz/trabajoautonomo:$NEW_VERSION -f Dockerfile-server .
+         docker build -t jofre159rz/trabajoautonomo:latest -f Dockerfile-server .
     - name: Push Docker Image
       env:
          NEW_VERSION: ${{ steps.version.outputs.version }}
